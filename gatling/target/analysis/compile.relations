@@ -1,0 +1,26 @@
+products:
+   src/main/scala/gatling/test/simulation/ExampleGetSimulation.scala -> target/classes/gatling/test/simulation/ExampleGetSimulation.class
+   src/main/scala/gatling/test/simulation/PerfTestConfig.scala -> target/classes/gatling/test/simulation/PerfTestConfig$.class
+   src/main/scala/gatling/test/simulation/PerfTestConfig.scala -> target/classes/gatling/test/simulation/PerfTestConfig.class
+   src/main/scala/gatling/test/simulation/SystemPropertiesUtil.scala -> target/classes/gatling/test/simulation/SystemPropertiesUtil$.class
+   src/main/scala/gatling/test/simulation/SystemPropertiesUtil.scala -> target/classes/gatling/test/simulation/SystemPropertiesUtil.class
+binary dependencies:
+   src/main/scala/gatling/test/simulation/ExampleGetSimulation.scala -> /home/fq79dq/.m2/repository/io/gatling/gatling-commons/3.3.1/gatling-commons-3.3.1.jar
+   src/main/scala/gatling/test/simulation/ExampleGetSimulation.scala -> /home/fq79dq/.m2/repository/io/gatling/gatling-core/3.3.1/gatling-core-3.3.1.jar
+   src/main/scala/gatling/test/simulation/ExampleGetSimulation.scala -> /home/fq79dq/.m2/repository/io/gatling/gatling-http/3.3.1/gatling-http-3.3.1.jar
+   src/main/scala/gatling/test/simulation/ExampleGetSimulation.scala -> /home/fq79dq/.m2/repository/org/scala-lang/scala-library/2.12.10/scala-library-2.12.10.jar
+   src/main/scala/gatling/test/simulation/ExampleGetSimulation.scala -> /opt/jdk/jdk1.8.0_131/jre/lib/rt.jar
+   src/main/scala/gatling/test/simulation/PerfTestConfig.scala -> /home/fq79dq/.m2/repository/org/scala-lang/scala-library/2.12.10/scala-library-2.12.10.jar
+   src/main/scala/gatling/test/simulation/PerfTestConfig.scala -> /opt/jdk/jdk1.8.0_131/jre/lib/rt.jar
+   src/main/scala/gatling/test/simulation/SystemPropertiesUtil.scala -> /home/fq79dq/.m2/repository/org/scala-lang/scala-library/2.12.10/scala-library-2.12.10.jar
+   src/main/scala/gatling/test/simulation/SystemPropertiesUtil.scala -> /opt/jdk/jdk1.8.0_131/jre/lib/rt.jar
+source dependencies:
+   src/main/scala/gatling/test/simulation/ExampleGetSimulation.scala -> src/main/scala/gatling/test/simulation/PerfTestConfig.scala
+   src/main/scala/gatling/test/simulation/PerfTestConfig.scala -> src/main/scala/gatling/test/simulation/SystemPropertiesUtil.scala
+external dependencies:
+class names:
+   src/main/scala/gatling/test/simulation/ExampleGetSimulation.scala -> gatling.test.simulation.ExampleGetSimulation
+   src/main/scala/gatling/test/simulation/PerfTestConfig.scala -> gatling.test.simulation.PerfTestConfig
+   src/main/scala/gatling/test/simulation/PerfTestConfig.scala -> gatling.test.simulation.PerfTestConfig$
+   src/main/scala/gatling/test/simulation/SystemPropertiesUtil.scala -> gatling.test.simulation.SystemPropertiesUtil
+   src/main/scala/gatling/test/simulation/SystemPropertiesUtil.scala -> gatling.test.simulation.SystemPropertiesUtil$

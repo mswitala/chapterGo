@@ -1,0 +1,26 @@
+# Default ignored files
+*.iml
+*.ipr
+.project
+.classpath
+.springBeans
+.idea/
+.metadata/
+.settings/
+#target/
+build/
+**/atlassian-ide-plugin.xml
+**/.classpath
+**/.springBeans
+**/.project
+**/.settings/
+**/.metadata/
+**/.idea/
+#**/target/
+**/overlays/
+**/build/
+**/test-output/
+**/tmp/
+**/dep_sources_fld/
+.DS_Store
+*~/

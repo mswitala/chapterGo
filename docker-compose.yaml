@@ -1,0 +1,46 @@
+version: '3.7'
+
+services:
+  dbpost:
+    container_name: dbpost
+    image: postgres:12.2-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: chaptertime
+      POSTGRES_PASSWORD: chaptertime
+      POSTGRES_DB: chaptertime
+    volumes:
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/1-schema.sql
+      - ./db/data.sql:/docker-entrypoint-initdb.d/2-data.sql
+
+  webgo:
+    container_name: webgo
+    build: ./go/
+    ports:
+      - "8081:8080"
+    depends_on:
+      - dbpost
+    volumes:
+      - ./results/:/app/results
+
+  webjava:
+    container_name: webjava
+    build: ./java/
+    ports:
+      - "8082:8080"
+    depends_on:
+      - dbpost
+    volumes:
+      - ./results/:/app/results
+
+  gatling:
+    container_name: gatling
+    build: ./gatling/
+    environment:
+      JAVA_OPTS: -DTEST_URL=http://webjava:8080/sh -DUSERS_PER_SEC=500 -DRAMP_UP_TIME_MIN=4 -DRAMP_UP_USERS_PER_SEC=5 -DDURATION_SECONDS=300
+      #JAVA_OPTS: -DTEST_URL=http://webgo:8080/sh -DUSERS_PER_SEC=500 -DRAMP_UP_TIME_MIN=4 -DRAMP_UP_USERS_PER_SEC=5 -DDURATION_SECONDS=300
+      #JAVA_OPTS: -DTEST_URL=http://webjava:8080/db -DUSERS_PER_SEC=500 -DRAMP_UP_TIME_MIN=4 -DRAMP_UP_USERS_PER_SEC=5 -DDURATION_SECONDS=300
+      #JAVA_OPTS: -DTEST_URL=http://webgo:8080/db -DUSERS_PER_SEC=500 -DRAMP_UP_TIME_MIN=4 -DRAMP_UP_USERS_PER_SEC=5 -DDURATION_SECONDS=300
+    volumes:
+      - ./results/:/app/results
